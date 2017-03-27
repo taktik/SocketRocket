@@ -31,8 +31,7 @@ NSError *SRErrorWithCodeDescriptionUnderlyingError(NSInteger code, NSString *des
                                        NSUnderlyingErrorKey: underlyingError }];
 }
 
-NSError *SRHTTPErrorWithCodeDescription(NSInteger httpCode, NSInteger errorCode, NSString *description)
-{
+NSError *SRHTTPErrorWithCodeDescription(NSInteger httpCode, NSInteger errorCode, NSString *description) {
     return [NSError errorWithDomain:SRWebSocketErrorDomain
                                code:errorCode
                            userInfo:@{ NSLocalizedDescriptionKey: description,
